@@ -1,6 +1,6 @@
 import os 
 
-lista = []
+compras = []
 
 while True: 
     print('Selecione uma opção')
@@ -9,14 +9,14 @@ while True:
     if opcao == 'i':
         os.system('clear')
         valor = input('Valor: ')
-        lista.append(valor)
+        compras.append(valor)
 
     elif opcao == 'a':
         indice_str = input('Escolha o índice para apagar: ')
 
         try:
             indice = int(indice_str)
-            del lista[indice]
+            del compras[indice]
         except ValueError:
             print('Por favor, digite um número inteiro')
         except IndexError:
@@ -24,12 +24,10 @@ while True:
         except Exception:
             print('Erro desconhecido')
     elif opcao == 'l':
-        os.system('clear')
-
-        if len(lista) == 0:
+        if len(compras) == 0:
             print('Nada para listar')
 
-            for i, valor in enumerate(lista):
-                print(i, valor)
+        for indice, nome in enumerate(compras):
+            print(indice, nome)
     else:
         print('Por favor, escolha i, a ou l')
