@@ -4,7 +4,7 @@ compras = []
 
 while True: 
     print('Selecione uma opção')
-    opcao = input('[i] inserir [a] apagar [l] listar').lower()
+    opcao = input('[i] inserir [a] apagar [l] listar: ').lower()
 
     if opcao == 'i':
         os.system('clear')
