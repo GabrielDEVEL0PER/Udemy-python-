@@ -1,3 +1,5 @@
+# aula 110
+
 x = 1
 
 def escopo():
