@@ -1,1 +1,2 @@
-teste
+variavel = print('Luiz')
+print(variavel)
