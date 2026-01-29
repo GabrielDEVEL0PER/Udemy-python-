@@ -7,4 +7,5 @@ def multi (*args):
 numeros = 1, 2, 10, 20
 outra_soma = multi(*numeros)
 print(outra_soma)
+ 
 
