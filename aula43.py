@@ -1,3 +1,9 @@
+import pprint
+
+def p(v):
+    pprint.pprint(v, sort_dicts=False, width=40)
+
+
 lista = []
 for numero in range(10):
     lista.append(numero)
@@ -17,9 +23,18 @@ produtos = [
 
 novos_produtos = [
     {**produto, 'preco': produto['preco'] * 1.05}
-  if produto['preco'] > 20 else {**produto}
+    if produto['preco'] > 20 else {**produto}
     for produto in produtos
 
 ]
 
-print(*novos_produtos, sep='\n')
+# print(*novos_produtos, sep='\n')
+
+novos_produtos = [
+    {**produto, 'preco': produto['preco'] * 1.05}
+    if produto['preco'] > 20 else {**produto}
+    for produto in produtos
+    if (produto['preco'] >= 20 and produto['preco'] * 1.05) > 10
+]
+
+p(novos_produtos)
