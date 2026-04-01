@@ -1,23 +1,22 @@
-def parametros_decorador(nome):
-    def decorador(func):
-        print('Decorador:', nome)
+def criar_funcao(func):
+    def interna(*args, **kwargs):
+        print('Vou te decorar')
+        for arg in args:
+            e_string(arg)
+        resultado = func(*args, **kwargs)
+        print(f'O seu resultado foi {resultado}.')
+        print('OK, agora você foi decorada')
+        return resultado
+    return interna
 
-        def sua_nova_funcao(*args, **kwargs):
-            res = func(*args, **kwargs)
-            final = f'{res} {nome}'
-            return final
-        return sua_nova_funcao
-    return decorador
+@criar_funcao
+def inverte_string(string):
+    print(f'{inverte_string.__name__}')
+    return string[::-1]
 
+def e_string(param):
+    if not isinstance(param, str):
+        raise TypeError('param deve ser uma string')
 
-@parametros_decorador(nome='5')
-@parametros_decorador(nome='4')
-@parametros_decorador(nome='3')
-@parametros_decorador(nome='2')
-@parametros_decorador(nome='1')
-
-def soma(x, y):
-    return x + y
-
-dez_mais_cinco = soma (10, 5)
-print(dez_mais_cinco)
+invertida = inverte_string('123')
+print(invertida)
