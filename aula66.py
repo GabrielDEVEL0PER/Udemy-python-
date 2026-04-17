@@ -45,3 +45,13 @@ print(
         [1,2 ,3 ,4]
     ))
 )
+
+def filtrar_preco(produto):
+    return produto['preco'] > 100
+
+novos_produtos = filter(
+    filtrar_preco, 
+    produtos
+)
+print_iter(produtos)
+print_iter(novos_produtos)
