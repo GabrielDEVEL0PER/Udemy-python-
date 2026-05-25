@@ -1,0 +1,2 @@
+Ola mundo
+arquivo vai ser fechado
