@@ -9,7 +9,7 @@ def carregar():
 
 def salvar (tarefas):
     with open (ARQUIVO, 'w') as f:
-        json.dumb(tarefas, f, ident=4)
+        json.dump(tarefas, f, indent=4)
 
 
 def listar(tarefas):
