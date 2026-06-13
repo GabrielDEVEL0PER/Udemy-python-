@@ -1,4 +1,16 @@
 import os 
+import json
+
+ARQUIVO = 'tarefas.json'
+
+def carregar():
+    with open(ARQUIVO, 'r') as f:
+        return json.load(f)
+
+def salvar (tarefas):
+    with open (ARQUIVO, 'w') as f:
+        json.dumb(tarefas, f, ident=4)
+
 
 def listar(tarefas):
     print()
@@ -39,11 +51,13 @@ def adicionar(tarefa, tarefas):
     if not tarefa:
         print('Você não digitou uma tarefa')
         return
+
     print(f'{tarefa=} adicionada na lista de tarefas.')
     tarefas.append(tarefa)
-    print()
+    salvar(tarefas)
+    print(f'Tarefa "{tarefa}" adicionada!')
 
-tarefas = []
+tarefas = carregar()
 tarefas_refazer = []
 
 while True:
