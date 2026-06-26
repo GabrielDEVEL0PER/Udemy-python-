@@ -5,8 +5,8 @@ class Pessoa:
         self.nome = nome
         self.idade = idade
 
-p1 = Pessoa('Gabriel, 20')
-p2 = Pessoa ('Ana, 25')
+p1 = Pessoa('Gabriel', 20)
+p2 = Pessoa ('Ana', 25)
 
 
 dados = [
@@ -15,7 +15,7 @@ dados = [
 ]
 
 with open('pessoas.json', 'w',) as arquivo:
-    json.dumb(dados, arquivo)
+    json.dump(dados, arquivo)
 
 print('Dados Salvos')
 
