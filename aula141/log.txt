@@ -1,0 +1,5 @@
+Success: Galaxy s23 está ligado (Smartphone)
+Success: Iphone está ligado (Smartphone)
+Success: Iphone está ligado (Smartphone)
+Error: Galaxy s23 está desligado (Smartphone)
+Success: Iphone está ligado (Smartphone)
