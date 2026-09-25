@@ -22,24 +22,24 @@ class NotificacaoSMS(Notificacao):
 
 ##pratica
 
-class NotificacaoWhats(Notificacao):
-    def enviar(self) -> bool:
-        print('Whats: enviado!', self.mensagem)
-        return True
+# class NotificacaoWhats(Notificacao):
+#     def enviar(self) -> bool:
+#         print('Whats: enviado!', self.mensagem)
+#         return True
 
-def notificar(notificacao: Notificacao):
-    notificacao_enviada = notificacao.enviar()
+# def notificar(notificacao: Notificacao):
+#     notificacao_enviada = notificacao.enviar()
 
-    if notificacao_enviada:
-        print('Enviada')
-    else:
-        print('Notificação NÃO enviada')
+#     if notificacao_enviada:
+#         print('Enviada')
+#     else:
+#         print('Notificação NÃO enviada')
 
-notificacao_email = NotificacaoEmail('testando e-mail')
-notificar(notificacao_email)
+# notificacao_email = NotificacaoEmail('testando e-mail')
+# notificar(notificacao_email)
 
-notificacao_sms = NotificacaoSMS('testando sms')
-notificar(notificacao_sms)
+# notificacao_sms = NotificacaoSMS('testando sms')
+# notificar(notificacao_sms)
 
-notificacao_whats = NotificacaoWhats('testando o whats')
-notificar(notificacao_whats)
+# notificacao_whats = NotificacaoWhats('testando o whats')
+# notificar(notificacao_whats)
