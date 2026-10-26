@@ -7,9 +7,8 @@ class A:
         self.x = x
         print('Sou o init')
 
-    # def __repr__(self):
-    #     return 'A()'
+    def __repr__(self):
+        return 'A()'
 
 a = A(123)
 print(a.x)
-print(a)
