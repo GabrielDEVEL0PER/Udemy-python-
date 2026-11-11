@@ -1,4 +1,4 @@
-import uma_linha
+import documentando_funcoes
 
 # print(dir(uma_linha))
 
@@ -10,4 +10,4 @@ import uma_linha
 
 # print(uma_linha.__name__)
 
-help(uma_linha)
+help(documentando_funcoes)
